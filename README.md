@@ -6,6 +6,7 @@
 * Hibernate
 * ThymeLeaf
 * MySQL
+* Maven
 * Docker
 * JDK 1.8
 * SpringToolSuite
@@ -33,3 +34,8 @@ docker kill $(docker ps -a -q)
 * Thymeleaf
 * MySQL Driver
 
+1. Implement Model Class
+2. Create Repository Interface
+3. Implement Service Class
+4. Implement MVC Controller
+5. 
