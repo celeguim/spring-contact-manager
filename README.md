@@ -38,4 +38,80 @@ docker kill $(docker ps -a -q)
 2. Create Repository Interface
 3. Implement Service Class
 4. Implement MVC Controller
-5. 
+
+### Angular Frontend
+<https://github.com/celeguim/springboot-frontend>
+
+```
+npm i -g @angular/cli
+ng new springboot-frontend
+cd springboot-frontend
+```
+
+```
+# src/app/app.module.ts
+
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
+
+import { AppComponent } from './app.component';
+
+@NgModule({
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    BrowserModule,
+    HttpClientModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+```
+
+```
+# src/app/app.component.ts
+
+import { Component } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+import { OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
+})
+export class AppComponent implements OnInit {
+  constructor(private http: HttpClient) { }
+  title = 'springboot-frontend';
+  httpdata;
+
+  ngOnInit() {
+    this.http.get('http://localhost:8081/api/cities')
+      .subscribe((data) => this.displaydata(data));
+  }
+  displaydata(data) { this.httpdata = data; }
+}
+```
+
+```
+# src/app/app.component.html
+
+<h2>List of cities</h2>
+
+<ul *ngFor="let data of httpdata">
+  <li>Name : {{data.name}} Population: {{data.population}}</li>
+</ul>
+
+```
+
+```
+ng serve --verbose=true
+mvn spring-boot:run 
+```
+
+Test it
+<http://localhost:4200>
+
