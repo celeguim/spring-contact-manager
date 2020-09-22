@@ -22,8 +22,8 @@ class ContactsApplicationTests {
 
 	@Test
 	public void getsAllContacts() throws Exception {
-		mockMvc.perform(MockMvcRequestBuilders.get("/contacts").accept(MediaType.APPLICATION_JSON))
-				.andExpect(status().isOk()).andReturn();
+		mockMvc.perform(MockMvcRequestBuilders.get("/").accept(MediaType.APPLICATION_JSON)).
+		andExpect(status().isOk()).andReturn();
 	}
 
 }
