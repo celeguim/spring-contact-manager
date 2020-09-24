@@ -23,6 +23,12 @@ docker exec -it mysqldb mysql -u root --password=root -e 'show databases;'
 
 docker exec -it mysqldb mysql -u root --password=root -e 'use mysqldb; show tables;'
 
+docker exec -it mysqldb mysql -u root --password=root -e 'select * from mysqldb.cities;'
+
+docker exec -it mysqldb mysql -u root --password=root -e 'select * from mysqldb.contacts;'
+
+docker exec -it mysqldb mysql -u root --password=root -e 'select * from mysqldb.books;'
+
 docker kill $(docker ps -a -q)
 ```
 

@@ -22,18 +22,15 @@ public class City {
 	}
 
 	public City(String name, int population) {
-
 		this.name = name;
 		this.population = population;
 	}
 
 	public Long getId() {
-
 		return id;
 	}
 
 	public void setId(Long id) {
-
 		this.id = id;
 	}
 
@@ -42,17 +39,14 @@ public class City {
 	}
 
 	public void setName(String name) {
-
 		this.name = name;
 	}
 
 	public int getPopulation() {
-
 		return population;
 	}
 
 	public void setPopulation(int population) {
-
 		this.population = population;
 	}
 

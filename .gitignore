@@ -3,4 +3,4 @@
 .target
 .project
 target
-spring-boot-app.log
+spring-boot-app.log*
