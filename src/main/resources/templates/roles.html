@@ -3,25 +3,23 @@
 	xmlns:th="http://www.thymeleaf.org">
 <head>
 <meta charset="utf-8" />
-<title>City Manager</title>
+<title>Roles Manager</title>
 </head>
 <body>
 	<div align="center">
-		<h1>City List</h1>
-		<a href="/cities/new">New City</a> <br /> <br />
+		<h1>Roles List</h1>
+		<a href="/roles/new">New Role</a> <br /> <br />
 		<table border="1">
 			<thead>
 				<tr>
 					<th>ID</th>
 					<th>Name</th>
-					<th>Population</th>
 				</tr>
 			</thead>
 			<tbody>
-				<tr th:each="city : ${cityList}">
-					<td th:text="${city.id}">ID</td>
-					<td th:text="${city.name}">Name</td>
-					<td th:text="${city.population}">Population</td>
+				<tr th:each="role : ${rolesList}">
+					<td th:text="${role.id}">ID</td>
+					<td th:text="${role.name}">Name</td>
 				</tr>
 			</tbody>
 		</table>

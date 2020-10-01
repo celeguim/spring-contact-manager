@@ -4,3 +4,4 @@
 .project
 target
 spring-boot-app.log*
+.DS_Store
